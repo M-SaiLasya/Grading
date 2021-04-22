@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int addDigit(int num) {
+
+   if (num <= 0) {
+  
+     return 0;
+  
+   } 
+ 
+   return ( num % 10) + addDigit( num / 10);
+}
+
+int main(void) {
+ 
+  int n, sum;
+ 
+  printf ("Enter a number : ");
+  scanf ("%d", &n);
+ 
+  sum = addDigit(n);
+ 
+  printf("Sum of digits of a number is %d",sum);
+ 
+  return 0;
+}
